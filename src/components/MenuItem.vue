@@ -51,6 +51,7 @@ export default {
 }
 
 .description {
+  font-weight: 300;
   font-size: var(--text-xsmall);
 }
 

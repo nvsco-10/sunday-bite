@@ -9,29 +9,25 @@
         <p>
           From great benefits to a supportive culture to avenues for learning and growth, we aim to provide you with a career that betters your life.
         </p>
-        <router-link to="" class="btn">Open Positions</router-link>
+        <a href="#positions" class="btn">Open Positions</a>
       </div>
     </div>
-    <div class="values container">
-      <h4>Our Values</h4>
-      <div class="values-items">
-        <div :key="item.id" v-for="item in valuesItems">
-          <CareersValuesItem :item="item" />
-        </div>
-      </div>
-    </div>
+    <CareersValues :valuesItems="valuesItems" />
+    <CareersPositions />
   </section>
 </template>
 
 <script>
-import CareersValuesItem from '../components/CareersValuesItem'
+import CareersValues from '../components/CareersValues'
+import CareersPositions from '../components/CareersPositions'
 import { values } from '../utils/values'
 
 export default {
 // eslint-disable-next-line
   name: 'Careers',
   components: {
-    CareersValuesItem
+    CareersValues,
+    CareersPositions
   },
   data() {
     return {
@@ -52,16 +48,9 @@ section {
   flex-direction: column;
 }
 
-h3, h4 {
-  text-align: center;
-}
-
 h3 {
+  text-align: center;
   margin-bottom: 1rem;
-}
-
-h4 {
-  margin-bottom: 2rem;
 }
 
 .banner {
@@ -97,31 +86,5 @@ h4 {
   font-size: var(--text-small);
   margin-bottom: 1rem;
 }
-
-.values {
-  padding: 2rem 0;
-}
-
-.values-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 2.5rem;
-  column-gap: 2rem;
-}
-
-@media (max-width: 900px) {
-  .values-items {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .values-items {
-    grid-template-columns: 1fr;
-    row-gap: 2.5rem;
-  }
-}
-
 
 </style>

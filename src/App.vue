@@ -46,6 +46,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+  text-align: center;
   font-family: 'Londrina Solid', cursive;
 }
 

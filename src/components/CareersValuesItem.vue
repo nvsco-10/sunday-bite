@@ -52,6 +52,10 @@ h5 {
   margin-bottom: 1rem;
 }
 
+p {
+  font-weight: 300;
+}
+
 @media (max-width: 900px) {
   .values-item {
     width: 300px;
