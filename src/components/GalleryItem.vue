@@ -3,7 +3,7 @@
     <div class="img-container">
       <img :src="item.img" :alt="item.label" />
     </div>
-    <h3>{{ item.label }}</h3>
+    <h4>{{ item.label }}</h4>
   </div>
 </template>
 
@@ -20,7 +20,8 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+h4 {
+  font-size: 1.2rem;
   margin-top: .5rem;
   text-align: center;
   text-transform: capitalize;

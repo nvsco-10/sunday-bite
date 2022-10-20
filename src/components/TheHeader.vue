@@ -1,10 +1,15 @@
 <template>
    <header>
     <div class="header container">
-      <div class="logo-container">
-        <img src="../assets/logo.png" alt="the-sunday-bite"/>
+      <div class="nav-header">
+        <div class="logo-container">
+          <img src="../assets/logo.png" alt="the-sunday-bite"/>
+        </div>
+        <button @click="toggleMenu" class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>        
+        </button>
       </div>
-      <ul>
+      <ul :class="[showMenu ? 'show' : '', 'nav-links']">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/menu">Menu</router-link></li>
         <li><router-link to="/careers">Careers</router-link></li>
@@ -15,7 +20,17 @@
 
 <script>
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  data() {
+    return {
+      showMenu: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    }
+  }
 }
 </script>
 
@@ -31,11 +46,18 @@ header {
 }
 
 .header {
-  height: 100%;
+  /* height: auto; */
   max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem;
 }
 
 .logo-container {
@@ -43,13 +65,58 @@ header {
   width: 30px;
 }
 
-ul {
+.toggle-btn {
+  display: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
   display: flex;
   gap: 4rem;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  background: var(--bg-yellow);
 }
 
 li {
   list-style: none;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 900px) {
+  .header {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-header {
+    width: 95vw;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 0;
+    transition: all 0.3s linear;
+    border-top: none;
+  }
+
+  .show {
+    border-top: solid 1px var(--bg-dark);
+    height: 15rem;
+  }
 }
 
 </style>
+

@@ -31,11 +31,13 @@ export default {
 :root {
   --bg-yellow: #ffce07;
   --bg-green: #668924;
-  --bg-dark: #1f2b21;
+  --bg-dark: #1f242b;
+  --bg-darkblue: rgb(30, 37, 54);
 
   --text-large: 1.5rem;
   --text-medium: 1.3rem;
   --text-small: 1rem;
+  --text-xsmall: 0.8rem;
 }
 
 body {
@@ -49,6 +51,10 @@ h1, h2, h3, h4, h5 {
 
 h2 {
   font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.8rem;
 }
 
 a {
@@ -74,20 +80,25 @@ section {
   /* height: 100%; */
 }
 
-.btn {
-  display: inline-block;
-  text-align: center;
-  background: #000;
-  color: #fff;
+button {
   border: none;
+  font-family: inherit;
+  text-align: center;
   padding: 10px 20px;
-  min-width: 200px;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  min-width: 75px;
+  padding: 10px 20px;
   margin: 5px;
   border-radius: 18px;
-  cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
 }
 
 .btn:focus {
@@ -108,5 +119,8 @@ section {
     font-size: 2.7rem;
   }
 
+  h3 {
+    font-size: 2.1rem;
+  }
 }
 </style>

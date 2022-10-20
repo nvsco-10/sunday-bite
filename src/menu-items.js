@@ -1,5 +1,5 @@
 // menu items
-const menu = [
+export const menu = [
   {
     id: 1,
     title: "buttermilk pancakes",
