@@ -57,6 +57,14 @@ h3 {
   font-size: 2.8rem;
 }
 
+h4 {
+  font-size: 2.1rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -121,6 +129,10 @@ button {
 
   h3 {
     font-size: 2.1rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
   }
 }
 </style>

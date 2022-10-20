@@ -109,9 +109,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
-  border: solid 1px #fff;
+  background-color:  #71962e;
+  /* border: solid 1px #fff; */
   border-radius: 5px;
   padding: 20px;
+  box-shadow: rgba(48, 44, 44, 0.35) 0px 5px 15px;
 }
 
 

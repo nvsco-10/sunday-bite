@@ -67,11 +67,12 @@ i {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-size: 0.7rem;
 }
 
 .logo-container {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   margin-bottom: 1rem;
 }
 

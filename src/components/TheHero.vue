@@ -5,7 +5,7 @@
         <div class="text-container">
           <h1>The<br>Sunday Bite</h1>
           <p>Delicious food for every mood.</p>
-          <a class="btn" href="">ORDER NOW</a >
+          <a class="btn" href="https://www.doordash.com/" target="_blank" rel="noreferrer">ORDER NOW</a >
         </div>
       </div>
       <div class="column right">
@@ -93,6 +93,7 @@ img:hover {
   }
 
   .btn {
+    width: 100%;
     align-self: center;
   }
 

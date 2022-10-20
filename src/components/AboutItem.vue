@@ -3,7 +3,7 @@
     <div class="img-container">
       <img :src="item.img" :alt="item.label" />
     </div>
-    <h3>{{ item.label }}</h3>
+    <p>{{ item.label }}</p>
   </div>
 </template>
 
@@ -26,10 +26,10 @@ export default {
   align-items: center;
 }
 
-.about-item h3 {
+p {
   color: #fff;
-  font-size: var(--text-medium);
-  letter-spacing: 0.2rem;
+  font-size: var(--text-xsmall);
+  text-transform: uppercase;
 }
 
 .img-container {
@@ -39,10 +39,6 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .about-item h3 {
-    font-size: 0.9rem;
-  }
-
   .img-container {
     height: 50px;
     width: 50px;
