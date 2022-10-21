@@ -9,7 +9,7 @@
         <button id="dessert" :class="[activeBtn === 'dessert' ? 'active' : '','menu-btn']">Dessert</button>
       </div>
       <div class="menu-items">
-        <div :key="item.id" v-for="item in menuItems">
+        <div :key="item.id" v-for="item in filteredMenuItems">
           <MenuItem :item="item" />
         </div>
       </div>
@@ -19,7 +19,6 @@
 
 <script>
 import MenuItem from '../components/MenuItem'
-import { menu } from '../menu-items'
 
 export default {
 // eslint-disable-next-line
@@ -30,7 +29,8 @@ export default {
   data() {
     return {
       activeBtn: 'all',
-      menuItems: []
+      menuItems: [],
+      filteredMenuItems: []
     }
   },
   methods: {
@@ -40,17 +40,24 @@ export default {
         this.activeBtn = e.target.id
 
         e.target.id !== "all" 
-          ? this.menuItems = menu.filter((item) =>
+          ? this.filteredMenuItems = this.menuItems.filter((item) =>
               item.category === e.target.id
             )
-          : this.menuItems = menu
+          : this.filteredMenuItems = [...this.menuItems]
       }
       return
-    }
-    
+    },
+    async fetchMenu() {
+      const res = await fetch('/api/menu')
+      const data = await res.json()
+
+      return data
+    },
   },
-  created() {
-    this.menuItems = menu
+
+  async created() {
+    this.menuItems = await this.fetchMenu()
+    this.filteredMenuItems = this.menuItems
   }
 }
 </script>

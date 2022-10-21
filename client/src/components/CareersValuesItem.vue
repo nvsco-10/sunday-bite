@@ -26,8 +26,9 @@ export default {
 
 <style scoped>
 .values-item {
-  width: 375px;
+  max-width: 400px;
   height: 400px;
+  margin: 0 auto;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -58,7 +59,7 @@ p {
 
 @media (max-width: 900px) {
   .values-item {
-    width: 300px;
+    max-width: 300px;
     height: 375px;
     padding: 1rem;
   }
@@ -68,9 +69,11 @@ p {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .values-item {
     width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
     height: 375px;
   }
 

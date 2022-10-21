@@ -42,13 +42,13 @@ h4 {
   column-gap: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1350px) {
   .values-items {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .values-items {
     grid-template-columns: 1fr;
   }

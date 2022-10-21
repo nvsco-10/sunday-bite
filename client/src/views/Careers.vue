@@ -13,7 +13,8 @@
       </div>
     </div>
     <CareersValues :valuesItems="valuesItems" />
-    <CareersPositions />
+    <div class="spacer"></div>
+    <CareersPositions :positionsItems="positionsItems" />
   </section>
 </template>
 
@@ -31,11 +32,22 @@ export default {
   },
   data() {
     return {
-      valuesItems: []
+      valuesItems: [],
+      positionsItems: []
     }
   },
-  created() {
+  methods: {
+    async fetchPositions() {
+      const res = await fetch('/api/positions')
+      const data = await res.json()
+
+      console.log(data)
+      return data
+    }
+  },
+  async created() {
     this.valuesItems = values
+    this.positionsItems = await this.fetchPositions()
   }
 }
 </script>
@@ -85,6 +97,10 @@ h3 {
   text-align: center;
   font-size: var(--text-small);
   margin-bottom: 1rem;
+}
+
+.spacer {
+  height: 75px;
 }
 
 </style>
