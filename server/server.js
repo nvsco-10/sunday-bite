@@ -2,14 +2,18 @@ import express from 'express'
 import cors from 'cors'
 import sequelize from './config/connection.js';
 
+import dotenv  from 'dotenv'
+dotenv.config()
+
 const app = express()
 
 // import { dirname } from 'path'
 // import { fileURLToPath } from 'url'
 // import path from 'path'
 
-import PositionsRouter from './routes/PositionsRoutes.js'
+import positionsRouter from './routes/positionsRoutes.js'
 import menuItemRouter from './routes/menuItemsRoutes.js'
+import authRouter from './routes/authRoutes.js'
 
 // const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -21,8 +25,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1/careers', PositionsRouter)
+app.use('/api/v1/careers', positionsRouter)
 app.use('/api/v1/menu', menuItemRouter)
+app.use('/api/v1/auth', authRouter)
 
 app.get('/', (req,res) => {
   res.json({msg: 'hello!'});

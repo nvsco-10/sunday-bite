@@ -4,7 +4,7 @@ const createMenuItem = async (req,res) => {
   const { title, category, price, description } = req.body
 
   if (!title || !category || !price || !description) {
-    res.status(400).json({ message: 'Please provide all values.' })
+    res.status(400).json({ msg: 'Please provide all values.' })
     return
   }
 
@@ -23,7 +23,7 @@ const deleteMenuItem = async (req,res) => {
   const { id } = req.params
 
   if (!id) {
-    res.status(400).json({msg: 'Please provide an id'})
+    res.status(400).json({ msg: 'Please provide an id' })
     return
   }
 
@@ -35,7 +35,7 @@ const deleteMenuItem = async (req,res) => {
   )
 
   if(!deletedMenuItem) {
-    res.status(404).json({msg: `No menu item with id: ${id}`})
+    res.status(404).json({ msg: `No menu item with id: ${id}` })
     return
   }
 

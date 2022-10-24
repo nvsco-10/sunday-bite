@@ -4,7 +4,7 @@ const createPosition = async (req,res) => {
   const { title } = req.body
 
   if (!title) {
-    res.status(400).json({ message: 'Please provide a position title.' })
+    res.status(400).json({ msg: 'Please provide a position title.' })
     return
   }
 
@@ -23,14 +23,14 @@ const getPositionById = async (req,res) => {
   const { id } = req.params
 
   if (!id) {
-    res.status(400).json({msg: 'Please provide an id'})
+    res.status(400).json({ msg: 'Please provide an id' })
     return
   }
 
   const position = await Position.findByPk(id)
 
   if (!position) {
-    res.status(404).json({msg: `No position with id: ${id}`})
+    res.status(404).json({ msg: `No position with id: ${id}` })
     return
   }
 
@@ -42,18 +42,18 @@ const updatePosition = async (req,res) => {
   const { title } = req.body
 
   if (!id) {
-    res.status(400).json({msg: 'Please provide an id'})
+    res.status(400).json({ msg: 'Please provide an id' })
     return
   }
 
   if (!title) {
-    res.status(400).json({msg: 'Please provide a title'})
+    res.status(400).json({ msg: 'Please provide a title' })
     return
   }
 
   const position = await Position.findByPk(id)
   if (!position) {
-    res.status(404).json({msg: `No position with id: ${id}`})
+    res.status(404).json({ msg: `No position with id: ${id}` })
     return
   }
 
@@ -72,7 +72,7 @@ const deletePosition = async (req,res) => {
   const { id } = req.params
 
   if (!id) {
-    res.status(400).json({msg: 'Please provide an id'})
+    res.status(400).json({ msg: 'Please provide an id' })
     return
   }
 
@@ -84,11 +84,11 @@ const deletePosition = async (req,res) => {
   )
 
   if(!deletedPosition) {
-    res.status(404).json({msg: `No position with id: ${id}`})
+    res.status(404).json({ msg: `No position with id: ${id}` })
     return
   }
 
-  res.status(200).json(deletedPosition)
+  res.status(200).json({ msg: 'Position successfully deleted'})
 }
 
 export { createPosition, getAllPositions, getPositionById, updatePosition, deletePosition }

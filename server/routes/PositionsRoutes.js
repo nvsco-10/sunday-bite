@@ -7,7 +7,7 @@ import {
   getAllPositions,
   getPositionById,
   updatePosition
-} from '../controllers/PositionsController.js'
+} from '../controllers/positionsController.js'
 
 router.route('/positions')
   .get(getAllPositions)
