@@ -1,10 +1,11 @@
 {
-  "name": "cafe",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest build",
     "lint": "vue-cli-service lint",
     "db": "json-server --watch db.json --port 5000"
   },

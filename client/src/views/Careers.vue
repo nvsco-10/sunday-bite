@@ -38,10 +38,9 @@ export default {
   },
   methods: {
     async fetchPositions() {
-      const res = await fetch('/api/positions')
+      const res = await fetch('/api/v1/careers/positions')
       const data = await res.json()
-
-      console.log(data)
+  
       return data
     }
   },

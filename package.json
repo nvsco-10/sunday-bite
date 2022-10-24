@@ -1,0 +1,28 @@
+{
+  "name": "cafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "server": "npm start --prefix server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvsco-10/sunday-bite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvsco-10/sunday-bite/issues"
+  },
+  "homepage": "https://github.com/nvsco-10/sunday-bite#readme",
+  "description": ""
+}

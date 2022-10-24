@@ -48,7 +48,7 @@ export default {
       return
     },
     async fetchMenu() {
-      const res = await fetch('/api/menu')
+      const res = await fetch('/api/v1/menu')
       const data = await res.json()
 
       return data

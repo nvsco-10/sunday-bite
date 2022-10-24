@@ -6,7 +6,7 @@
       "category": "breakfast",
       "price": 11.99,
       "img": "https://i.ibb.co/TBpGz90/item-1.jpg",
-      "desc": "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed"
+      "description": "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "category": "breakfast",
       "price": 12.99,
       "img": "https://i.ibb.co/7rygTD3/item-2.jpg",
-      "desc": "vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats "
+      "description": "vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats "
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "category": "breakfast",
       "price": 9.99,
       "img": "https://i.ibb.co/82wBppg/item-3.jpg",
-      "desc": "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral."
+      "description": "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral."
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "category": "breakfast",
       "price": 11.99,
       "img": "https://i.ibb.co/YQKKkj1/item-4.jpg",
-      "desc": "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, "
+      "description": "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, "
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "category": "entrees",
       "price": 14.99,
       "img": "https://i.ibb.co/dMpfTQB/item-5.jpg",
-      "desc": "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up "
+      "description": "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up "
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "category": "entrees",
       "price": 15.99,
       "img": "https://i.ibb.co/fdWrvmW/item-6.jpg",
-      "desc": "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday"
+      "description": "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "category": "entrees",
       "price": 15.99,
       "img": "https://i.ibb.co/gr0xYwF/item-7.jpg",
-      "desc": "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird "
+      "description": "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird "
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "category": "entrees",
       "price": 12.99,
       "img": "https://i.ibb.co/Fq5T5tK/item-8.jpg",
-      "desc": "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  "
+      "description": "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  "
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "category": "dessert",
       "price": 8.99,
       "img": "https://i.ibb.co/bzCjn0f/item-9.jpg",
-      "desc": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
+      "description": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "category": "dessert",
       "price": 8.99,
       "img": "https://i.ibb.co/bRZBT8h/item-10.jpg",
-      "desc": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
+      "description": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
     },
     {
       "id": 11,
@@ -86,30 +86,29 @@
       "category": "dessert",
       "price": 8.99,
       "img": "https://i.ibb.co/BZdGgJD/item-11.jpg",
-      "desc": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
+      "description": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
     }
   ],
   "positions": [
     {
-      "id": 1,
-      "position": "marketing specialist",
-      "type": "full-time",
-      "location": "remote",
-      "datePosted": "10/22/2022"
+      "title": "marketing assistant",
+      "positionType": "full-time",
+      "location": "remote"
     },
     {
-      "id": 2,
-      "position": "web developer",
-      "type": "full-time",
-      "location": "remote",
-      "datePosted": "10/22/2022"
+      "title": "host",
+      "positionType": "full-time",
+      "location": "on-site"
     },
     {
-      "id": 3,
-      "position": "hostess",
-      "type": "part-time",
-      "location": "on-site",
-      "datePosted": "10/22/2022"
+      "title": "web developer",
+      "positionType": "full-time",
+      "location": "remote"
+    },
+    {
+      "title": "server",
+      "positionType": "full-time",
+      "location": "on-site"
     }
   ]
 }

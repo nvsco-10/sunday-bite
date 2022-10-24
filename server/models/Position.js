@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../config/connection.js'
 
-const CareersPosition = sequelize.define('CareersPosition,',
+const Position = sequelize.define('Position,',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,15 +24,27 @@ const CareersPosition = sequelize.define('CareersPosition,',
     locationAddress: {
       type: DataTypes.STRING,
       defaultValue: 'dallas, tx'
+    },
+    datePosted: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      get() {
+        const date = new Date(this.dataValues.datePosted);
+          return date.toLocaleString('en-US', {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          })
+      }
     }
   },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
-    underscored: true,
-    modelName: 'careers_position',
+    underscored: false,
+    modelName: 'position',
   }
 )
 
-export default CareersPosition
+export default Position

@@ -1,11 +1,11 @@
 <template>
   <article class="positions-item">
     <div>
-      <p class="title">{{ item.position }}</p>
-      <p>{{ item.type }}</p>
+      <p class="title">{{ item.title }}</p>
+      <p>{{ item.positionType }}</p>
       <p>Posted: <span>{{ item.datePosted }}</span></p>
     </div>
-    <p class="location"><i class="fa-solid fa-location-dot"></i> {{ item.location }}</p>
+    <p class="location"><i class="fa-solid fa-location-dot"></i> {{ item.location }} <span class="location-address">({{ item.locationAddress }})</span></p>
   </article>  
 </template>
 
@@ -37,6 +37,10 @@ export default {
   color: #fff;
 }
 
+p {
+  text-transform: capitalize;
+}
+
 .title {
   font-size: var(--text-small);
   font-weight: bold;
@@ -46,6 +50,10 @@ export default {
 
 .location {
   margin-top: 1rem;
+}
+
+.location, .location-address {
+  text-transform: uppercase;
 }
 
 i {

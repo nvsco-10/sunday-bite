@@ -10,9 +10,9 @@
         </button>
       </div>
       <ul :class="[showMenu ? 'show' : '', 'nav-links']">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/menu">Menu</router-link></li>
-        <li><router-link to="/careers">Careers</router-link></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/careers">Careers</a></li>
       </ul>
     </div>
   </header>

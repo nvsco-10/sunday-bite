@@ -8,7 +8,7 @@
         <p class="name">{{ item.title }}</p>
         <p class="price">$ {{ item.price }}</p>
       </div>
-      <div class="description">{{ item.desc }}</div>
+      <div class="description">{{ item.description }}</div>
     </div>
   </article>
 </template>
