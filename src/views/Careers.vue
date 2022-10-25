@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     async fetchPositions() {
-      const res = await fetch('/api/v1/careers/positions')
+      const res = await fetch('https://the-sunday-bite-api.herokuapp.com/api/v1/careers/positions')
       const data = await res.json()
   
       return data
