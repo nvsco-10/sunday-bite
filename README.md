@@ -3,7 +3,6 @@
 
 ## Description
 - Mock restaurant website with a dynamic menu and careers page.
-- Menu and careers data fetched from [API built using Node & MYSQL](https://github.com/nvsco-10/sunday-bite-db) (separate repo & deployment).
 - Front-end deployed via Netlify, Back-end deployed via Heroku.
 
 <p align="center">
@@ -25,7 +24,9 @@ Back-end:
 * cors
 * dotenv
 
-## APIs
+## Server/API
+- Menu and careers data fetched from [API built using Node & MYSQL](https://github.com/nvsco-10/sunday-bite-db) (separate repo & deployment).
+
 Menu
 - https://the-sunday-bite-api.herokuapp.com/api/v1/menu
 
