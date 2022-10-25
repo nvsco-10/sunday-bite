@@ -1,24 +1,42 @@
-# cafe
+# The Sunday Bite
+- Full-stack application built using Vue.js, Node.js and MySQL.
 
-## Project setup
-```
-npm install
-```
+## Description
+- Mock restaurant website with a dynamic menu and careers page.
+- Menu and careers data fetched from [API built using Node & MYSQL](https://github.com/nvsco-10/sunday-bite-db) (separate repo & deployment).
+- Front-end deployed via Netlify, Back-end deployed via Heroku.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<p align="center">
+  <img src="./assets/menu.PNG" alt="sunday bite menu page" width="800" />
+</p>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Technologies Used
+Front-end:
+* vue
+* vue-router
+* json-server (during development)
 
-### Lints and fixes files
-```
-npm run lint
-```
+Back-end:
+* Node
+* MYSQL2
+* Sequelize
+* express
+* express-async-errors
+* cors
+* dotenv
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## APIs
+Menu
+- https://the-sunday-bite-api.herokuapp.com/api/v1/menu
+
+Careers Open Positions
+- https://the-sunday-bite-api.herokuapp.com/api/v1/careers/positions
+
+<p align="center">
+  <img src="./assets/careers-positions-api.PNG" alt="sunday bite menu api" width="800" />
+</p>
+
+## Future Developments
+- Admin dashboard to manage menu and careers data.
+- Authentication to access admin dashboard
+
