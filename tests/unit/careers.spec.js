@@ -25,7 +25,15 @@ global.fetch = jest.fn(() => Promise.resolve({
 }))
 
 describe('Careers.vue', () => {
-  const wrapper = shallowMount(Careers)     
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallowMount(Careers)
+  })
+
+  afterEach(() => {
+    wrapper.unmount()
+  })
 
   it('gets list of company values', () => {
     expect(wrapper.vm.$data.valuesItems.length).toBeGreaterThan(3)
