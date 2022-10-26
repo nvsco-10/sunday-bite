@@ -1,10 +1,13 @@
 <template>
   <div id="positions" class="positions container">
     <h4>Open Positions</h4>
-    <div class="positions-items">
+    <div v-if="positionsItems.length > 0" class="positions-items">
       <div :key="item.id" v-for="item in positionsItems">
         <CareersPositionsItems :item="item" />
       </div>
+    </div>
+    <div v-else class="no-positions">
+      Sorry, no open positions available..
     </div>
   </div>  
 </template>
@@ -36,6 +39,10 @@ export default {
 
 h4 {
   margin-bottom: 2rem;
+}
+
+.no-positions {
+  text-align: center;
 }
 
 @media (max-width: 900px) {

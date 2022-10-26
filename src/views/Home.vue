@@ -1,24 +1,24 @@
 <template>
-  <TheHero />
-  <TheAbout />
-  <TheGallery />
-  <TheBanner />
+  <HomeHero />
+  <HomeAbout />
+  <HomeGallery />
+  <HomeBanner />
 </template>
 
 <script>
-import TheHero from '../components/TheHero'
-import TheAbout from '../components/TheAbout'
-import TheGallery from '../components/TheGallery'
-import TheBanner from '../components/TheBanner'
+import HomeHero from '../components/HomeHero'
+import HomeAbout from '../components/HomeAbout'
+import HomeGallery from '../components/HomeGallery'
+import HomeBanner from '../components/HomeBanner'
 
 export default {
 // eslint-disable-next-line
   name: 'Home',
   components: {
-    TheHero,
-    TheAbout,
-    TheGallery,
-    TheBanner,
+    HomeHero,
+    HomeAbout,
+    HomeGallery,
+    HomeBanner,
   }
 }
 </script>

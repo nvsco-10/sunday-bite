@@ -2,19 +2,19 @@
   <section>
     <div class="gallery container">
       <div :key="item.id" v-for="item in galleryItems">
-        <GalleryItem :item="item" />
+        <HomeGalleryItem :item="item" />
      </div>
     </div>
   </section>
 </template>
 
 <script>
-import GalleryItem from './GalleryItem'
+import HomeGalleryItem from './HomeGalleryItem'
 
 export default {
-  name: 'TheGallery',
+  name: 'HomeGallery',
   components: {
-    GalleryItem
+    HomeGalleryItem
   },
   data() {
     return {

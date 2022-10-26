@@ -8,10 +8,13 @@
         <button id="entrees" :class="[activeBtn === 'entrees' ? 'active' : '','menu-btn']">Entrees</button>
         <button id="dessert" :class="[activeBtn === 'dessert' ? 'active' : '','menu-btn']">Dessert</button>
       </div>
-      <div class="menu-items">
+      <div v-if="filteredMenuItems.length > 0" class="menu-items">
         <div :key="item.id" v-for="item in filteredMenuItems">
           <MenuItem :item="item" />
         </div>
+      </div>
+      <div v-else class="spinner">
+        <BaseSpinner />
       </div>
     </div>
   </section>
@@ -19,12 +22,14 @@
 
 <script>
 import MenuItem from '../components/MenuItem'
+import BaseSpinner from '../components/BaseSpinner'
 
 export default {
 // eslint-disable-next-line
   name: 'Menu',
   components: {
-    MenuItem
+    MenuItem,
+    BaseSpinner
   },
   data() {
     return {

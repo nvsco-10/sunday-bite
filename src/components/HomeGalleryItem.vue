@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'GalleryItem',
+  name: 'HomeGalleryItem',
   props: {
     item: {
       type: Object,

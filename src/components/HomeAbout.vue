@@ -20,19 +20,19 @@
     </div>
     <div class="about-items container">
       <div :key="item.id" v-for="item in aboutItems">
-        <AboutItem :item="item" />
+        <HomeAboutItem :item="item" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AboutItem from './AboutItem'
+import HomeAboutItem from './HomeAboutItem'
 
 export default {
-  name: 'TheAbout',
+  name: 'HomeAbout',
   components: {
-    AboutItem
+    HomeAboutItem
   },
   data() {
     return {
