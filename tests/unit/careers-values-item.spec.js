@@ -20,7 +20,6 @@ describe('CareersValuesItem.vue', () => {
     })
   })
 
-
   it('processes valid props data', () => {
     expect(wrapper.text()).toContain(item.title, item.desc, item.img)
     

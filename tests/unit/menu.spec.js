@@ -3,6 +3,7 @@ import flushPromises from 'flush-promises'
 
 import Menu from '@/views/Menu.vue'
 import MenuItem from '@/components/MenuItem.vue'
+import BaseSpinner from '@/components/BaseSpinner.vue'
 
 const MOCK_MENU_ITEMS = [
   {
@@ -55,9 +56,29 @@ describe('Menu.vue', () => {
     wrapper.unmount()
   })
 
+  it('shows loading spinner if filteredMenuItems array is not ready', async () => {
+    const items = []
+
+    await wrapper.setData({
+      filteredMenuItems: []
+    })
+
+    expect(wrapper.vm.$data.filteredMenuItems.length).toEqual(0)
+    expect(wrapper.vm.$data.filteredMenuItems).toEqual(items)
+    expect(wrapper.find('.spinner').exists()).toBe(true)
+    expect(wrapper.findComponent(BaseSpinner).exists()).toBe(true)
+  })
+
+  it('hides loading spinner if filteredMenuItems array is ready', async () => {
+    expect(wrapper.vm.$data.filteredMenuItems.length).toBeGreaterThan(0)
+    expect(wrapper.vm.$data.filteredMenuItems.length).toEqual(MOCK_MENU_ITEMS.length)
+    expect(wrapper.find('.spinner').exists()).toBe(false)
+    expect(wrapper.findComponent(BaseSpinner).exists()).toBe(false)
+  })
+
   it('calls api to get menu items', async () => {
-    wrapper.vm.fetchMenu()
-    await flushPromises()
+    // wrapper.vm.fetchMenu()
+    // await flushPromises()
     expect(wrapper.vm.$data.menuItems).toEqual(MOCK_MENU_ITEMS)
   })
 
