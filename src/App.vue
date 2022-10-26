@@ -72,6 +72,10 @@ a {
   font-family: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   height: 100%;
   width: 100%;

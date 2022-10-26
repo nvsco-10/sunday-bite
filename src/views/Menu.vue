@@ -41,10 +41,10 @@ export default {
   methods: {
     handleClick(e) {
       e.preventDefault()
-      if(e.target.nodeName === "BUTTON") {
+      if(e.target.nodeName === 'BUTTON') {
         this.activeBtn = e.target.id
 
-        e.target.id !== "all" 
+        e.target.id !== 'all'
           ? this.filteredMenuItems = this.menuItems.filter((item) =>
               item.category === e.target.id
             )
