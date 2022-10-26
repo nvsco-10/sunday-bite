@@ -77,8 +77,6 @@ describe('Menu.vue', () => {
   })
 
   it('calls api to get menu items', async () => {
-    // wrapper.vm.fetchMenu()
-    // await flushPromises()
     expect(wrapper.vm.$data.menuItems).toEqual(MOCK_MENU_ITEMS)
   })
 

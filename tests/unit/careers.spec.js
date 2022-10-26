@@ -1,13 +1,14 @@
 import { shallowMount } from '@vue/test-utils'
-import flushPromises from 'flush-promises'
 
 import Careers from '@/views/Careers.vue'
+import CareersValues from '@/components/CareersValues.vue'
+import CareersPositions from '@/components/CareersPositions.vue'
 
 const MOCK_POSITIONS = [
   {
-  "title": "marketing assistant",
-  "positionType": "full-time",
-  "location": "remote"
+    "title": "marketing assistant",
+    "positionType": "full-time",
+    "location": "remote"
   },
   {
     "title": "host",
@@ -37,13 +38,31 @@ describe('Careers.vue', () => {
     wrapper.unmount()
   })
 
-  it('gets list of company values', () => {
-    expect(wrapper.vm.$data.valuesItems.length).toBeGreaterThan(3)
+  it('gets list of company values', async () => {
+    const values = [{},{},{}]
+
+    await wrapper.setData({
+      valuesItems: values
+    })
+
+    expect(wrapper.vm.$data.valuesItems.length).toEqual(values.length)
+    expect(wrapper.vm.$data.valuesItems).toEqual(values)
+  })
+
+  it('renders CareersValues component', () => {
+    expect(wrapper.findComponent(CareersValues).exists()).toBe(true)
   })
 
   it('calls api to get positions items', async () => {
-    wrapper.vm.fetchPositions()
-    await flushPromises()
     expect(wrapper.vm.$data.positionsItems).toEqual(MOCK_POSITIONS)
+  })
+
+  it('renders CareersPositions component', () => {
+    expect(wrapper.findComponent(CareersPositions).exists()).toBe(true)
+  })
+
+  it('contains a link button that points to positions', () => {
+    expect(wrapper.find('a').exists()).toBe(true)
+    expect(wrapper.find('a').attributes('href')).toEqual('#positions')
   })
 })

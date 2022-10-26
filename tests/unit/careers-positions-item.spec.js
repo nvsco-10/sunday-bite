@@ -27,7 +27,7 @@ describe('CareersPositionsItem.vue', () => {
   it('processes valid props data', () => {
     expect(wrapper.text()).toContain(item.title, item.positionType, item.datePosted, item.location, item.locationAddress)
     
-    expect(wrapper.find('.title').text()).toBe(item.title)
+    expect(wrapper.find('.title').text()).toEqual(item.title)
     expect(wrapper.find('.location').text()).toContain(item.location)
     expect(wrapper.find('.location-address').text()).toContain(item.locationAddress)
   })
