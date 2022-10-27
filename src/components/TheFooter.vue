@@ -8,7 +8,7 @@
         </div>
         <div class="contact-info">
           <i class="fa-solid fa-envelope"></i>
-          <p>hey@restaurant.com</p>
+          <p>contact@thesundaybite.com</p>
         </div>
         <div class="contact-info">
           <i class="fa-solid fa-location-dot"></i>

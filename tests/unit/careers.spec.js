@@ -61,8 +61,8 @@ describe('Careers.vue', () => {
     expect(wrapper.findComponent(CareersPositions).exists()).toBe(true)
   })
 
-  it('contains a link button that points to positions', () => {
-    expect(wrapper.find('a').exists()).toBe(true)
+  it('contains a link button that scrolls down to positions', () => {
+    expect(wrapper.find('a').attributes('class')).toEqual('btn')
     expect(wrapper.find('a').attributes('href')).toEqual('#positions')
   })
 })

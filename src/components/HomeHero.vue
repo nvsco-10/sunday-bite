@@ -10,7 +10,7 @@
       </div>
       <div class="column right">
         <div class="img-container">
-          <img src="../assets/hero-image.png" alt="poke bowl" />
+          <img src="../assets/hero-image.png" alt="the sunday bite poke bowl" />
         </div>
       </div>
     </div>

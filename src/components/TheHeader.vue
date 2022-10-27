@@ -10,9 +10,9 @@
         </button>
       </div>
       <ul :class="[showMenu ? 'show' : '', 'nav-links']">
-        <li><a href="/">Home</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/careers">Careers</a></li>
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/menu">Menu</a></li>
+        <li><a class="nav-link" href="/careers">Careers</a></li>
       </ul>
     </div>
   </header>
@@ -82,7 +82,6 @@ header {
 }
 
 li {
-  list-style: none;
   padding: 0.5rem 1rem;
 }
 
